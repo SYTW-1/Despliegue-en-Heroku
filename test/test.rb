@@ -15,7 +15,7 @@ describe "Pruebas twitter.rb" do
         @twitt = PopularTwitter.new
         @client = my_twitter_client()
         @user1 = "naddiaz92"
-        @user2 = "asdfg"
+        @user2 = "naddiaz000"
 
     end
     
@@ -23,14 +23,14 @@ describe "Pruebas twitter.rb" do
         assert @twitt.usuario(@client, @user1)
     end
     it "El número de usurios retornados debe ser" do
-        assert_equal 20, @twitt.amigos(@client, @user1)
+        assert_equal 18, @twitt.amigos(@client, @user1)
     end
     it "Elusuario no debe existir" do
         refute @twitt.usuario(@client, @user2)
     end
     
     it "El número de usuarios retornados es incorrecto" do
-        refute 4, @twitt.amigos(@client, @user1)
+        refute_equal 4, @twitt.amigos(@client, @user1)
     end    
 
 end

@@ -7,8 +7,15 @@ class PopularTwitter
 
 	require './configure.rb'
 
+	def usuario(client,username)
+		return client.user? username
+	end
+
+	def amigos(client,username)
+		return client.user(username).friends_count
+	end
+
 	def users(username,followers)
-		client = my_twitter_client()
 		if followers.to_i <= 0
 			return [["error",0],["description",'Número incorrecto de usuarios']].to_json
 		elsif followers.to_i > 10
