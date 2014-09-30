@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Despliegue-en-heroku : Despliegue en Heroku la práctica Aplicación Web con Sinatra: Contar la Popularidad de Nuestros Amigos en Twitter.">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Despliegue-en-heroku</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/SYTW-1/Despliegue-en-Heroku">View on GitHub</a>
+
+          <h1 id="project_title">Despliegue-en-heroku</h1>
+          <h2 id="project_tagline">Despliegue en Heroku la práctica Aplicación Web con Sinatra: Contar la Popularidad de Nuestros Amigos en Twitter.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/SYTW-1/Despliegue-en-Heroku/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/SYTW-1/Despliegue-en-Heroku/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="sistemas-y-tecnolog%C3%ADas-web" class="anchor" href="#sistemas-y-tecnolog%C3%ADas-web"><span class="octicon octicon-link"></span></a>Sistemas y Tecnologías Web:</h3>
+
+<h2>
+<a name="pr%C3%A1ctica-pr%C3%A1ctica-despliegue-en-heroku" class="anchor" href="#pr%C3%A1ctica-pr%C3%A1ctica-despliegue-en-heroku"><span class="octicon octicon-link"></span></a>Práctica: Práctica: Despliegue en Heroku</h2>
+
+<p>Integracion continua en Travis </p>
+
+<p><a href="https://travis-ci.org/SYTW-1/Despliegue-en-Heroku"><img src="https://travis-ci.org/SYTW-1/Despliegue-en-Heroku.svg?branch=master" alt="Build Status"></a></p>
+
+<p><strong>Autor:</strong> Eliezer Cruz Suárez: alu0100611298
+<strong>Autor:</strong> Nestor Alvarez Díaz: alu0100594973</p>
+
+<h2>
+<a name="objetivo" class="anchor" href="#objetivo"><span class="octicon octicon-link"></span></a>Objetivo</h2>
+
+<hr><p>Partiendo de la aplicación anterior que cuenta nuestros usuarios, seguir esta guía:</p>
+
+<p>See <a href="http://www.sitepoint.com/build-sinatra-api-using-tdd-heroku-continuous-integration-travis/">Build a Sinatra API Using TDD, Heroku, and Continuous Integration with Travis
+by Darren Jones.  Published December 9, 2013</a></p>
+
+<p>En la cual se tratan los siguientes puntos:</p>
+
+<ul>
+<li>Writing tests using MiniTest</li>
+<li>Building a Sinatra API that returns information in JSON format</li>
+<li>Using Bundler to manage dependencies</li>
+<li>Using Git to manage version control</li>
+<li>Hosting Code on GitHub</li>
+<li>Deploying and host the site on Heroku</li>
+<li>Performing Continuous Integration with Travis CI</li>
+</ul><h2>
+<a name="instalaci%C3%B3n" class="anchor" href="#instalaci%C3%B3n"><span class="octicon octicon-link"></span></a>Instalación</h2>
+
+<hr><ol>
+<li>Instalaremos las gemas necesarias: <code>bundle install</code> o <code>rake bundle</code>
+</li>
+<li>Configuraremos el fichero <code>configure.rb</code> siguiendo las directrices del fichero <code>configure.rb.example</code>
+</li>
+</ol><h2>
+<a name="ejecuci%C3%B3n" class="anchor" href="#ejecuci%C3%B3n"><span class="octicon octicon-link"></span></a>Ejecución</h2>
+
+<hr><h3>
+<a name="local" class="anchor" href="#local"><span class="octicon octicon-link"></span></a>Local</h3>
+
+<p>Podemos ejecutarlo de dos formas:</p>
+
+<ol>
+<li>
+<code>rake server</code> o <code>ruby twitter.rb</code>
+</li>
+<li>Iremos a <a href="http://localhost:9393/">http://localhost:4567/</a> para poder usar la aplicación</li>
+</ol><h3>
+<a name="web" class="anchor" href="#web"><span class="octicon octicon-link"></span></a>Web</h3>
+
+<p>Podemos acceder a la aplicación <a href="http://ancient-sands-4653.herokuapp.com/">aquí</a>.</p>
+
+<h4>
+<a name="nota" class="anchor" href="#nota"><span class="octicon octicon-link"></span></a>Nota:</h4>
+
+<p>Se puede acceder mediante url poniendo: <code>url/nombre/número</code>.</p>
+
+<h2>
+<a name="test" class="anchor" href="#test"><span class="octicon octicon-link"></span></a>Test</h2>
+
+<hr><p>Podemos ejecutarlo de dos formas:
+<code>rake test</code> , <code>ruby ./test/test.rb</code> , <code>rake</code></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Despliegue-en-heroku maintained by <a href="https://github.com/SYTW-1">SYTW-1</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
