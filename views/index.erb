@@ -17,6 +17,15 @@
 			}
 		</script>
 	</head>
+	<style type="text/css">
+		body { 
+		  background: url(http://blog.ioncube.com/wp-content/uploads/2013/12/vector-wallpaper-blue-clouds-wallpapers-devianart-nkspace-media-array-wallwuzz-hd-wallpaper-8558.jpg) no-repeat center center fixed; 
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		}
+	</style>
 	<body>
 		<div class="container">
 			<div class="page-header">
@@ -29,9 +38,9 @@
 							Introduzca los datos de la búsqueda
 						</div>
 						<div class="panel-body">
-							<label for="username">Usuario</label><input id="username" type="text" placeholder="Usuario" name="username">
+							<label for="username">Nombre de usuario en Twitter: </label><input id="username" type="text" placeholder="Usuario" name="username">
 							<hr />
-							<label for="followers">Numero de Followers</label> <input id="followers" type="number" name="followers" value="1" min="1" max="10">
+							<label for="followers">¿Cuántos amigos desea mostrar?</label> <input id="followers" type="number" name="followers" value="1" min="1" max="10">
 							<hr />
 							<button class="btn btn-success" onclick="javascript:consult()">Consultar</button>
 						</div>
@@ -41,14 +50,17 @@
 					</div>
 				</div>
 				<div class="col-md-6">
-					<% @friends.each do |name,count| %>
+					<% @friends.each do |name,count,img| %>
 						<% if name == "error" %>
 							<div class="alert alert-danger" role="alert"><%= count %></div>
 						<% else %>
-							<li class="list-group-item">
-							    <span class="badge"><%= count %></span>
-							    <%= name %>
-						  	</li>
+							<div class="row">
+								<li class="list-group-item">
+									<img src=<%= img %> alt="profile picture" class="img-thumbnail">
+								    <span class="badge"><%= count %></span>
+								    <strong><%= name %></strong>
+							  	</li>
+						  	</div>
 						<% end %>
 					<% end %>
 				</div>
