@@ -38,12 +38,16 @@ En la cual se tratan los siguientes puntos:
 
 Podemos ejecutarlo de dos formas:
 
-1. `rake` o `ruby twitter.rb`
+1. `rake server` o `ruby twitter.rb`
 2. Iremos a [http://localhost:4567/](http://localhost:9393/) para poder usar la aplicación
 
 ### Web
 
 Podemos acceder a la aplicación [aquí](http://ancient-sands-4653.herokuapp.com/).
+
+#### Nota:
+
+Se puede acceder mediante url poniendo: `url/nombre/número`.
 
 ## Test
 -------
@@ -51,4 +55,4 @@ Podemos acceder a la aplicación [aquí](http://ancient-sands-4653.herokuapp.com
 Nos descargamos la rama test del repositorio.
 
 Podemos ejecutarlo de dos formas:
-`rake test` o `ruby ./test/test.rb`
+`rake test` , `ruby ./test/test.rb` , `rake`
