@@ -25,12 +25,36 @@ describe "Pruebas twitter.rb" do
     it "El número de usurios retornados debe ser" do
         assert_equal 18, @twitt.amigos(@client, @user1)
     end
-    it "Elusuario no debe existir" do
+    it "El usuario no debe existir" do
         refute @twitt.usuario(@client, @user2)
     end
     
     it "El número de usuarios retornados es incorrecto" do
         refute_equal 4, @twitt.amigos(@client, @user1)
     end    
+
+end
+
+describe "Pruebas en la web" do
+
+	it "Se carga la página del indice en el servidor" do
+    		get '/'
+    		assert last_response.ok?
+  	end
+
+	it "El titulo de la pagina es Popular Friends Twitter APP" do
+		get '/'
+		assert last_response.body.include?("<title>Popular Friends Twitter APP</title>"), "El titulo debe ser 'Popular Friends Twitter APP'"
+	end
+
+	it "Existe el campo formulario donde se comprueba el nombre de nuestros" do
+		get '/'
+		assert last_response.body.include?("Nombre de usuario en Twitter:"), "El body debe contener nombre usuario."
+	end
+
+	it "Existe el campo que pide el numero de amigos a contar" do
+		get '/'
+		assert last_response.body.include?("¿Cuántos amigos desea mostrar?"), "El body debe contener cuantos amigos."	
+	end
 
 end
