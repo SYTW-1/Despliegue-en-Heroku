@@ -3,7 +3,7 @@
 
 Integracion continua en Travis 
 
-![Integracion continua en Travis](https://travis-ci.org/SYTW-1/Despliegue-en-Heroku.svg?branch=master)
+[![Build Status](https://travis-ci.org/SYTW-1/Despliegue-en-Heroku.svg?branch=master)](https://travis-ci.org/SYTW-1/Despliegue-en-Heroku)
 
 **Autor:** Eliezer Cruz Suárez: alu0100611298
 **Autor:** Nestor Alvarez Díaz: alu0100594973
