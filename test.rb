@@ -8,3 +8,6 @@ include Rack::Test::Methods
 def app
   Sinatra::Application
 end
+
+describe "Amigos populares" do
+end
