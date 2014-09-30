@@ -17,20 +17,24 @@ class PopularTwitter
 
 	def users(username,followers)
 		if followers.to_i <= 0
-			return [["error",0],["description",'Número incorrecto de usuarios']].to_json
+			return [["error","Número incorrecto de usuarios"]]
 		elsif followers.to_i > 10
-			return [["error",1],["description","Limite de usuarios"]].to_json
+			return [["error","Limite de usuarios"]]
 		else
-			return client.friends(username,{}).take(followers.to_i).map{|i| [i.name,i.followers_count]}.sort_by{|i,j| -j}.to_json
+			client = my_twitter_client()
+			return client.friends(username,{}).take(followers.to_i).map{|i| [i.name,i.followers_count]}.sort_by{|i,j| -j}
 		end
 	end
 
 end
 
 get "/" do
+	@friends = []
 	erb :index
 end
 
-post "/:username/:followers" do
-	return PopularTwitter.new.users(params[:username],params[:followers])
+get "/:username/:followers" do
+	@friends = PopularTwitter.new.users(params[:username],params[:followers])
+	print @friends
+	erb :index
 end

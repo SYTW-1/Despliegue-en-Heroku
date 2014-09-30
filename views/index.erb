@@ -3,8 +3,57 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Popular Friends Twitter APP</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			function consult(){
+				location.href = "http://localhost:4567/" + $("#username").val() + "/" + $("#followers").val();
+			}
+		</script>
 	</head>
 	<body>
-		<h1>Popular Friends Twitter APP</h1>
+		<div class="container">
+			<div class="page-header">
+				<h1>Popular Friends Twitter APP</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							Introduzca los datos de la búsqueda
+						</div>
+						<div class="panel-body">
+							<label for="username">Usuario</label><input id="username" type="text" placeholder="Usuario" name="username">
+							<hr />
+							<label for="followers">Numero de Followers</label> <input id="followers" type="number" name="followers" value="1" min="1" max="10">
+							<hr />
+							<button class="btn btn-success" onclick="javascript:consult()">Consultar</button>
+						</div>
+						<div class="panel-footer">
+							<p>El número de usuarios máximo es de 10</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<% @friends.each do |name,count| %>
+						<% if name == "error" %>
+							<div class="alert alert-danger" role="alert"><%= count %></div>
+						<% else %>
+							<li class="list-group-item">
+							    <span class="badge"><%= count %></span>
+							    <%= name %>
+						  	</li>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	</body>
 </html>
