@@ -58,9 +58,5 @@ Se puede acceder mediante url poniendo: `url/nombre/número`.
 
 Podemos ejecutarlo de dos formas:
 `rake test` , `ruby ./test/test.rb` , `rake`
-<<<<<<< HEAD
 
 ## [gh-pages](http://sytw-1.github.io/Despliegue-en-Heroku)
-------------
-=======
->>>>>>> d8e1df27f29a764c990fe4403ee2bce0662d254c
