@@ -1,6 +1,10 @@
 ### Sistemas y Tecnologías Web:
 ##Práctica: Práctica: Despliegue en Heroku
 
+Integracion continua en Travis 
+
+[![Build Status](https://travis-ci.org/SYTW-1/Despliegue-en-Heroku.svg?branch=master)](https://travis-ci.org/SYTW-1/Despliegue-en-Heroku)
+
 **Autor:** Eliezer Cruz Suárez: alu0100611298
 **Autor:** Nestor Alvarez Díaz: alu0100594973
 
@@ -54,6 +58,9 @@ Se puede acceder mediante url poniendo: `url/nombre/número`.
 
 Podemos ejecutarlo de dos formas:
 `rake test` , `ruby ./test/test.rb` , `rake`
+<<<<<<< HEAD
 
 ## [gh-pages](http://sytw-1.github.io/Despliegue-en-Heroku)
 ------------
+=======
+>>>>>>> d8e1df27f29a764c990fe4403ee2bce0662d254c
