@@ -38,5 +38,3 @@ Podemos ejecutarlo de dos formas:
 
 1. `rake` o `ruby twitter.rb`
 2. Iremos a [http://localhost:4567/](http://localhost:9393/) para poder usar la aplicación
-
-## [gh-pages](http://alu0100611298.github.io/SYTW_practica_2)
