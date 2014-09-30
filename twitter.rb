@@ -21,6 +21,7 @@ class PopularTwitter
 end
 
 get "/" do
+	erb :index
 end
 
 post "/:username/:followers" do
