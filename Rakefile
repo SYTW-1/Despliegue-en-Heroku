@@ -5,4 +5,3 @@ end
 desc "Instalar las gemas"
 task :bundle do
 	sh "bundle install"
-end
