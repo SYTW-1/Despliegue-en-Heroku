@@ -52,7 +52,5 @@ Se puede acceder mediante url poniendo: `url/nombre/número`.
 ## Test
 -------
 
-Nos descargamos la rama test del repositorio.
-
 Podemos ejecutarlo de dos formas:
 `rake test` , `ruby ./test/test.rb` , `rake`

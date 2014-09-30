@@ -9,3 +9,8 @@ desc "run service"
 task :server do
   sh "ruby twitter.rb"
 end
+
+desc "bundle install"
+task :bundle do
+  sh "bundle install"
+end
