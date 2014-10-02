@@ -31,6 +31,10 @@ class PopularTwitter
 
 end
 
+configure do
+  set :show_exceptions, false
+end
+
 get "/" do
 	@friends = []
 	erb :index
@@ -43,5 +47,10 @@ end
 
 not_found do
 	@friends = [["error","No se ha introducido un nombre de usuario",0]]
+	erb :index
+end
+
+error do
+	@friends = [["error","Ha habido un error inesperado: " + params['captures'].first.inspect,0]]
 	erb :index
 end
