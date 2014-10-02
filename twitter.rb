@@ -21,7 +21,11 @@ class PopularTwitter
 			return [["error","Limite de usuarios",0]]
 		else
 			client = my_twitter_client()
-			return client.friends(username,{}).take(followers.to_i).map{|i| [i.name,i.followers_count,client.user(i.id).profile_image_url]}.sort_by{|i,j| -j}
+			if self.usuario(client,username)
+				return client.friends(username,{}).take(followers.to_i).map{|i| [i.name,i.followers_count,client.user(i.id).profile_image_url]}.sort_by{|i,j| -j}
+			else
+				return [["error","El usuario no existe",0]]
+			end
 		end
 	end
 
