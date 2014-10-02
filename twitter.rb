@@ -40,3 +40,8 @@ get "/:username/:followers" do
 	@friends = PopularTwitter.new.users(params[:username],params[:followers])
 	erb :index
 end
+
+not_found do
+	@friends = [["error","No se ha introducido un nombre de usuario",0]]
+	erb :index
+end
