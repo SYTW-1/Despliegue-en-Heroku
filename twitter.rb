@@ -51,6 +51,6 @@ not_found do
 end
 
 error do
-	@friends = [["error","Ha habido un error inesperado: " + params['captures'].first.inspect,0]]
+	@friends = [["error","Ha habido un error inesperado: " + env['sinatra.error'].message,0]]
 	erb :index
 end
