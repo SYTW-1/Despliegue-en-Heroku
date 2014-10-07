@@ -13,9 +13,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
 			function consult(){
-				var url = document.URL;
-				url = url.split("/");
-				location.href = url[0] + "//" + url[2] + "/" + $("#username").val() + "/" + $("#followers").val();
+				var url = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+				location.href = url + "/" + $("#username").val() + "/" + $("#followers").val();
 			}
 		</script>
 	</head>
